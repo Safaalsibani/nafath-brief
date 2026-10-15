@@ -18,11 +18,17 @@ The OWASP Mobile Application Security Verification Standard (MASVS) defines secu
 
 Resource: OWASP - Mobile Application Security Verification Standard - https://mas.owasp.org/MASVS/
 ## Networking
+BGP route hijacking occurs when unauthorized or more-specific route announcements attract traffic away from its intended destination. RPKI provides signed Route Origin Authorizations (ROAs) identifying which Autonomous Systems may originate IP prefixes. Routers using Route Origin Validation (ROV) can reject announcements with invalid origins when configured to do so. However, RPKI origin validation does not verify the complete AS_PATH and cannot prevent all route hijacking or path manipulation attacks.
 
+Resource: RFC 6811 - BGP Prefix Origin Validation - https://www.rfc-editor.org/rfc/rfc6811
 ## Cybersecurity
+Log4Shell (CVE-2021-44228) was a critical vulnerability in Apache Log4j 2's log4j-core component. Attacker-controlled log messages could trigger unsafe JNDI lookups and remote code execution. Its CVSS 3.1 score of 10.0 reflected network exploitability, low attack complexity, and no required privileges. Apache initially fixed the issue in version 2.15.0 for Java 8, but related vulnerabilities prompted additional updates. The recommended response is to identify affected installations and upgrade to a supported, fully patched release.
 
+Resource: Apache Logging Services - Security - https://logging.apache.org/security.html
 ## Data
+A Software Bill of Materials (SBOM) is a machine-readable inventory of software components and their dependencies. The 2026 Minimum Elements guidance specifies component producer, name, version, identifiers, license, dependency relationships, and cryptographic hash values and algorithms. It also includes SBOM author, timestamp, document version, data format, generation context, tools, and signature information. These fields enable component tracking and faster vulnerability investigations. However, an SBOM supports risk assessment rather than proving that software is secure.
 
+Resource: 2026 Minimum Elements for a Software Bill of Materials (SBOM) - https://www.cyber.gov.au/publication/2026-minimum-elements-for-a-software-bill-of-materials-sbom
 ## Misconception in My Track
 
 ## Open Question
