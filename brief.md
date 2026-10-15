@@ -30,5 +30,10 @@ A Software Bill of Materials (SBOM) is a machine-readable inventory of software 
 
 Resource: 2026 Minimum Elements for a Software Bill of Materials (SBOM) - https://www.cyber.gov.au/publication/2026-minimum-elements-for-a-software-bill-of-materials-sbom
 ## Misconception in My Track
+**Misconception:** Keeping a GitHub repository private is enough to protect API keys, database passwords, and other sensitive credentials.
 
+**Correction:** Private repositories limit who can access the code, but they do not guarantee that embedded secrets remain confidential. Credentials can still leak through compromised accounts, shared code, exposed backups, or repository history. The Twelve-Factor App recommends keeping deployment-specific configuration outside the codebase, using environment variables. In practice, secure secret-management systems, least-privilege access, and prompt rotation of exposed credentials provide additional protection. For national digital services, these measures help reduce the risk of unauthorized access to connected systems.
+
+This correction is supported by Section III. Config, “Store config in the environment.”
 ## Open Question
+How can software engineering teams design a CI/CD pipeline that verifies the origin, integrity, and build provenance of third-party dependencies, while detecting potentially compromised but correctly signed updates and avoiding unnecessary delays to critical security patches?
